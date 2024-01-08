@@ -7,6 +7,7 @@
 // @match        https://*.zhihu.com/*
 // @match        https://*.csdn.net/*
 // @match        https://*.juejin.cn/*
+// @match        https://tieba.baidu.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        unsafeWindow
 // @grant        GM_addStyle
@@ -28,5 +29,8 @@
     } else if (url.includes('juejin.cn')) {
         // 登录框
         GM_addStyle('.bottom-login-guide {display:none !important}');
+    } else if (url.includes('tieba.baidu.com')) {
+        // 登录框
+        GM_addStyle('.tieba-custom-pass-login {display:none !important}');
     }
 })();
